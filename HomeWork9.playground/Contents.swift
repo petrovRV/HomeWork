@@ -61,8 +61,7 @@ var ships = (x: 1, y: 1, w: 4, h: 1)
 switch ships {
 case (1, 1, 1...4, 1):
     print("dead")
-default:
-    print("not ship")
+default: break
 }
 
 

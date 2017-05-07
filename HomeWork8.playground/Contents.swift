@@ -10,6 +10,7 @@ students.updateValue(0, forKey: "Zhenya Drozdyuk")
 
 students.removeValue(forKey: "Tonya Timofeeva")
 students.removeValue(forKey: "Olexandr Trotsko")
+
 print(students)
 
 //1.2
