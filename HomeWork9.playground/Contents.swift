@@ -20,6 +20,7 @@ print("Sum consonants: ", sumConsonants)
 print("Sum numbers: ", sumNumbers)
 print("Sum other symbol: ", sumOther)
 
+/*2*/
 let personAge = 50
 var youAre = ""
 switch personAge {
@@ -38,3 +39,30 @@ default:
 }
 
 print("You're \(youAre)")
+
+/*3*/
+let person = (name: "Юра", lastName: "Петров", patronymic: "Юрійович")
+var call = ""
+switch person {
+case (let n , _, _) where n.hasPrefix("А") || n.hasPrefix("О"):
+    call = n
+case (let n, _, let p) where p.hasPrefix("В") || p.hasPrefix("Д"):
+    call = n + " " + p
+case (_, let l, _) where l.hasPrefix("Е") || l.hasPrefix("З"):
+    call = l
+default:
+    call = person.name + " " + person.lastName + " " + person.patronymic
+}
+
+print("Привіт: ", call)
+
+/*4*/
+var ships = (x: 1, y: 1, w: 4, h: 1)
+switch ships {
+case (1, 1, 1...4, 1):
+    print("dead")
+default:
+    print("not ship")
+}
+
+
