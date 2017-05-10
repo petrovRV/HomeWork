@@ -1,11 +1,13 @@
 /*1*/
 class Student {
+    
     var name: String
     var surName: String
     var dateOfBirth: String
     var averageScore: Double
     
     init(name: String, surName: String, dateOfBirth: String, averageScore: Double) {
+        
         self.name = name
         self.surName = surName
         self.dateOfBirth = dateOfBirth
@@ -21,6 +23,7 @@ var journal = [ Student(name: "Yura", surName: "Petrov", dateOfBirth: "April 20 
 
 /*2*/
 func showStudent(students: [Student]) {
+    
     for i in 0..<students.count {
         print("\(i+1)) \(students[i].name) \(students[i].surName) \(students[i].dateOfBirth) \(students[i].averageScore) ")
     }
