@@ -42,25 +42,21 @@ struct Student {
     
     //return age
     var age: Int {
-        get {
-            let now = getNow()
-            var age = now.year - dateOfBirth.year
-            if now.month < dateOfBirth.month || (now.month == dateOfBirth.month && now.day < dateOfBirth.day) {
-                age -= 1
-            }
-            
-            return age
+        let now = getNow()
+        var age = now.year - dateOfBirth.year
+        if now.month < dateOfBirth.month || (now.month == dateOfBirth.month && now.day < dateOfBirth.day) {
+            age -= 1
         }
+        
+        return age
     }
     
     //return studied years
     var studiedYears: Int {
-        get {
-            let now = getNow()
-            let year = now.year - dateOfBirth.year
-            
-            return year > 6 ? year - 6 : 0
-        }
+        let now = getNow()
+        let year = now.year - dateOfBirth.year
+        
+        return year > 6 ? year - 6 : 0
     }
 }
 
